@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{Quantum Controversy!}{5}{0}{1}
+\beamer@sectionintoc {2}{Numerical Simulations}{26}{0}{2}
+\beamer@sectionintoc {3}{Hydrodynamic Quantum Potential}{31}{0}{3}

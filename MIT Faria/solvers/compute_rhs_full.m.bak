@@ -1,0 +1,15 @@
+function [rhs1, rhs2] = compute_rhs_full(phi_hat, eta_hat, t, p)
+% Computes the RHS of the hyperbolic part
+%     phi_x_hat = p.Kx.*phi_hat;
+%     phi_y_hat = p.Ky.*phi_hat;
+%     phi_x = real(ifft2(phi_x_hat));
+%     phi_y = real(ifft2(phi_y_hat));
+    
+%     phi_x = real(ifft2(p.Kx.*phi_hat));
+%     phi_y = real(ifft2(p.Ky.*phi_hat));
+
+
+rhs1      =   -p.g(t).*eta_hat + p.Bo*p.K2.*eta_hat + 2*p.nu0.*p.K2.*phi_hat;
+rhs2 = DtN(phi_hat,p) + 2*p.nu0.*p.K2.*eta_hat; % DtN computes phi_z_hat    
+   
+end
